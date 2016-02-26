@@ -29,23 +29,22 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 				}
 			}
 		})
-		.state('teams', {
-			url: '/teams',
-			templateUrl: base + 'teams/teams.html',
-			controller: 'TeamsController',
-			controllerAs: 'tc'
-		})
-		.state('team', {
-			url: '/team/:teamId',
-			templateUrl: base + 'teams/team.html',
-			controller: 'TeamController',
-			controllerAs: 'tc',
+		.state('sport.rooms', {
+			abstract: true,
+			url: '/room/:roomId',
+			template: '<ui-view></ui-view>',
 			resolve: {
-				team: function () {
-					// GET TEAM AT ID
-					// IF NO TEAM REDIRECT TO TEAMS
+				room: function () {
+					// GET ROOM AT ID
+					// IF NO ROOM REDIRECT TO SPORTS
 				}
 			}
-		});
+		})
+		.state('sport.room', {
+			url: '/:roomId',
+			templateUrl: base + 'room/room.html',
+			controller: 'RoomController',
+			controllerAs: 'rc'
+		})
 
 });
