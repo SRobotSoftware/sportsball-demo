@@ -29,9 +29,9 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 				}
 			}
 		})
-		.state('sport.rooms', {
+		.state('rooms', {
 			abstract: true,
-			url: '/room/:roomId',
+			url: '/sports/:sportName/room/:roomId',
 			template: '<ui-view></ui-view>',
 			resolve: {
 				room: function () {
@@ -40,7 +40,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 				}
 			}
 		})
-		.state('sport.rooms.room', {
+		.state('rooms.room', {
 			url: '',
 			templateUrl: base + 'room/room.html',
 			controller: 'RoomController',
