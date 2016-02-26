@@ -21,4 +21,19 @@ app.factory('DataFactory', function (DS) {
 		});
 	}
 
+	function Room() {
+		return DS.defineResource({
+			name: 'room',
+			endpoint: 'rooms',
+			relations: {
+				belongsTo: {
+					sport: {
+						localField: 'sport',
+						foreignKey: 'sportId'
+					}
+				}
+			}
+		})
+	}
+
 });
