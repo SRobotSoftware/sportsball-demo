@@ -23,8 +23,9 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 			controller: 'SportController',
 			controllerAs: 'sc',
 			resolve: {
-				sport: function () {
+				sport: function ($stateParams, DataFactory) {
 					// GET SPORT AT ID
+					return DataFactory.Sport.find({ name: $stateParams.sportName });
 					// IF NO SPORT REDIRECT TO SPORTS
 				}
 			}
