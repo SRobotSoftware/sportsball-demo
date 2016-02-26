@@ -13,7 +13,7 @@
 <div class="panel panel-default">
 	<div class="panel-heading">Available Sports:</div>
 	<div class="panel-body">
-		<h2 ng-if="sports.length < 1">Sorry, sports are currently available :(</h2>
+		<h2 ng-if="sports.length < 1">Sorry, no sports are currently available :(</h2>
 		<ul ng-if="sports.length > 0" class="list-group">
 			<li class="list-group-item" ng-repeat="sport in sports track by sport.id"><a ui-sref="sport({sportId: sport.id})">{{sport.name}} - {{sport.description}}</a></li>
 		</ul>

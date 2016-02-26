@@ -22,24 +22,11 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 			templateUrl: base + 'sports/sport.html',
 			controller: 'SportController',
 			controllerAs: 'sc',
-			// resolve: {
-			// 	sport: function ($stateParams, DataFactory) {
-			// 		// GET SPORT AT ID
-			// 		return DataFactory.Sport.find({ name: $stateParams.sportName });
-			// 		// IF NO SPORT REDIRECT TO SPORTS
-			// 	}
-			// }
 		})
 		.state('rooms', {
 			abstract: true,
-			url: '/sports/:sportName/room/:roomId',
+			url: '/sports/:sportId/room/:roomId',
 			template: '<ui-view></ui-view>',
-			resolve: {
-				room: function () {
-					// GET ROOM AT ID
-					// IF NO ROOM REDIRECT TO SPORTS
-				}
-			}
 		})
 		.state('rooms.room', {
 			url: '',
