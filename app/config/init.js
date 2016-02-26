@@ -1,7 +1,5 @@
 var app = angular.module('MYMODULE', []);
 
-app.controller('MainController', function ($scope) {
+// app.config();
 
-
-
-});
+// app.run();
