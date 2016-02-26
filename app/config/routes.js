@@ -40,8 +40,8 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 				}
 			}
 		})
-		.state('sport.room', {
-			url: '/:roomId',
+		.state('sport.rooms.room', {
+			url: '',
 			templateUrl: base + 'room/room.html',
 			controller: 'RoomController',
 			controllerAs: 'rc'
