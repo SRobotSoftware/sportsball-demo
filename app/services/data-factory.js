@@ -33,6 +33,12 @@ app.factory('DataFactory', function (DS) {
 						foreignKey: 'sportId'
 					}
 				}
+			},
+			beforeDestroy: function (resource, room, next) {
+				var myVar = room.name.split(' ');
+				if (myVar[0] !== 'DEBUG') {
+					next();
+				}
 			}
 		})
 	}

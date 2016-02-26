@@ -27,14 +27,14 @@
 									<input type="text" ng-model="room.name"> -
 									<input type="text" ng-model="room.description">
 									<span class="pull-right">
-										<button ng-click="room.editing = !room.editing; room.DSSave()" class="btn btn-success">Done</button>
+										<button ng-click="room.editing = !room.editing; room.DSSave()" class="btn btn-sm btn-success">Done</button>
 										</span>
 								</div>
 								<div ng-if="!room.editing">
 									<a ui-sref="rooms.room({roomId: room.id})">{{room.name}} - {{room.description}}</a>
 									<span class="pull-right">
-									<button ng-click="room.editing = !room.editing" class="btn btn-info">EDIT</button>
-									<button ng-click="sc.remove(room)" class="btn btn-danger">DELETE</button>
+									<button ng-click="room.editing = !room.editing" class="btn btn-sm btn-info">EDIT</button>
+									<button ng-click="sc.remove(room)" class="btn btn-sm btn-danger">DELETE</button>
 								</span>
 								</div>
 							</li>
