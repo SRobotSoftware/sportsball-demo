@@ -1,7 +1,8 @@
 app.factory('DataFactory', function (DS) {
 
 	var DataFactory = {
-
+		sport: Sport(),
+		room: Room()
 	};
 
 	return DataFactory;
