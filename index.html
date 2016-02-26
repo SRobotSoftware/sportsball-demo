@@ -14,13 +14,27 @@
 	<!--Open Site Container-->
 	<div class="container-fluid">
 
-		<h1>Welcome to Fantasy Sports!</h1>
+		<!--Open Header-->
+		<div class="page-header">
+			<h1>Welcome to Fantasy Sports! <div class="h5">Your Destination for Fantasy Sportsball!</div></h1>
+		</div>
+		<!--Close Header-->
 
-		<ui-view>
+		<!--Open Content-->
+		<div class="well well-lg">
+			<ui-view>
 
-		</ui-view>
+			</ui-view>
+		</div>
+		<!--Close Content-->
 
-		<p>All statistics shown are likely to be inaccurate.</p>
+		<!--Open Footer-->
+		<nav class="navbar navbar-fixed-bottom">
+			<div class="container">
+				<div class="small"><em>All statistics shown are likely to be inaccurate.</em></div>
+			</div>
+		</nav>
+		<!--Close Footer-->
 
 	</div>
 	<!--Close Site Container-->
